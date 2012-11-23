@@ -1,4 +1,0 @@
-FProject
-========
-
-My first project
