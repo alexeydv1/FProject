@@ -1,0 +1,14 @@
+#!/bin/bash
+function ext
+{
+  local name=${1##*/}
+  local name0="${name%.*}"
+  local ext=${name0:+${name#$name0}}
+  echo "${ext:-.}"
+}
+#if [$1| grep -P "^(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[0-9]{2}|[0-9])){3}"] file_name="file.wav"
+file_name="/usr/file.wav"
+echo ${file_name%%}
+set $1="a.txt"
+ext $1
+#fi
